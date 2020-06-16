@@ -1,2 +1,2 @@
 # Prophecy
-Simulation written in Go. 
+Fantasy World Simulation written in Go. 
