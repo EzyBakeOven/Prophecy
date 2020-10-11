@@ -1,4 +1,4 @@
-package main
+package setup
 
 import (
 	"fmt"
@@ -6,7 +6,8 @@ import (
 	"github.com/spf13/viper"
 )
 
-func processconfig() {
+// ProcessConfig : Processes the config file so a world can be generated.
+func ProcessConfig() {
 	viper.SetConfigName("simConfig") // name of config file (without extension)
 	viper.AddConfigPath(".")         // look for config in the working directory
 	err := viper.ReadInConfig()      // Find and read the config file
@@ -15,8 +16,4 @@ func processconfig() {
 	}
 
 	fmt.Println("Welcome to", viper.Get("Realm"))
-}
-
-func main() {
-	processconfig()
 }
